@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ab Workout Guide</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./app.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Ab Workout Guide</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#workouts">Workouts</a></li>
+            <li><a href="#tips">Tips</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <!-- Dropdown Menu -->
+            <li class="dropdown">
+                <a href="#">More</a>
+                <ul class="dropdown-content">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <button id="openModal">Open Modal</button>
+    <button id="tooltipBtn" class="tooltip" data-tooltip="Click to open the modal">Open Modal</button>
+
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Workout Tips</h2>
+        <p>Make sure to maintain proper form to avoid injury!</p>
+    </div>
+</div>
+    <main>
+        <section id="home">
+            <h2>Welcome to Your Ab Workout Guide</h2>
+            <p>Start your journey to stronger abs with our curated workouts.</p>
+        </section>
+        <section id="workouts">
+            <h2>Workouts</h2>
+            <p>Explore different ab exercises tailored for all levels.</p>
+        </section>
+        <section id="tips">
+            <h2>Workout Tips</h2>
+            <p>Learn the best techniques to maximize your results.</p>
+        </section>
+    </main>
+    <footer>
+    </footer>
+</body>
+</html>
