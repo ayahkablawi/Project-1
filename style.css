@@ -128,3 +128,25 @@ footer {
     visibility: visible; /* Appears when hovered*/
 }
 
+.accordion-item {
+    border-bottom: 1px solid white;
+    margin-bottom: 10px;
+}
+
+.accordion-header {
+    background-color: #444;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.accordion-content {
+    display: none;
+    padding: 10px;
+    background-color: white;
+    border-left: 3px solid light grey;
+}
