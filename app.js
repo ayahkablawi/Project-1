@@ -34,3 +34,21 @@ document.addEventListener("DOMContentLoaded", function() {   /*only runs after H
         });
     });
 });
+document.addEventListener("DOMContentLoaded", function() {
+    // Accordion functionality
+    const accordionHeaders = document.querySelectorAll(".accordion-header");
+
+    accordionHeaders.forEach(header => {
+        header.addEventListener("click", function() {
+            const content = this.nextElementSibling;
+
+            // the display of the accordion content
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+    });
+});
+
