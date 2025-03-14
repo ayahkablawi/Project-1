@@ -2,22 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     <title>Ab Workout Guide</title>
-    <link rel="stylesheet" href="./style.css">
-    <script src="./app.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Ab Workout Guide</h1>
-    </header>
+    <header><h1>Ab Workout Guide</h1></header>
+    
     <nav>
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#workouts">Workouts</a></li>
             <li><a href="#tips">Tips</a></li>
             <li><a href="#contact">Contact</a></li>
-            <!-- Dropdown Menu -->
             <li class="dropdown">
                 <a href="#">More</a>
                 <ul class="dropdown-content">
@@ -28,53 +26,53 @@
             </li>
         </ul>
     </nav>
-    <button id="openModal">Open Modal</button>
-    <button id="tooltipBtn" class="tooltip" data-tooltip="Click to open the modal">Open Modal</button>
 
-<div id="myModal" class="modal">
-    <div class="modal-content">
-        <span class="close-btn">&times;</span>
-        <h2>Workout Tips</h2>
-        <p>Make sure to maintain proper form to avoid injury!</p>
+    <button id="openModal" class="tooltip" data-tooltip="Click to open the modal">Open Modal</button>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Workout Tips</h2>
+            <p>Maintain proper form to avoid injury!</p>
+        </div>
     </div>
-</div>
+
     <main>
         <section id="home">
-            <h2>Welcome to Your Ab Workout Guide</h2>
+            <h2>Welcome</h2>
             <p>Start your journey to stronger abs with our curated workouts.</p>
         </section>
         <section id="workouts">
             <h2>Workouts</h2>
-            <p>Explore different ab exercises tailored for all levels.</p>
+            <p>Explore exercises for all levels.</p>
         </section>
         <section id="tips">
-            <h2>Workout Tips</h2>
-            <p>Learn the best techniques to maximize your results.</p>
+            <h2>Tips</h2>
+            <p>Learn the best techniques for maximum results.</p>
         </section>
         <section id="faq">
-            <h2>Frequently Asked Questions</h2>
-            <div class="accordion-item">
-                <button class="accordion-header">What is the best ab workout?</button>
-                <div class="accordion-content">
-                    <p>The best ab workout varies per person, but planks, crunches, and leg raises are highly effective.</p>
+            <h2>FAQs</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">Best ab workout?</button>
+                    <div class="accordion-content">
+                        <p>Planks, crunches, and leg raises are highly effective.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="accordion-item">
-                <button class="accordion-header">How often should I train my abs?</button>
-                <div class="accordion-content">
-                    <p>It's recommended to train your abs 3-4 times a week for optimal results.</p>
+                <div class="accordion-item">
+                    <button class="accordion-header">How often should I train?</button>
+                    <div class="accordion-content">
+                        <p>3-4 times a week for optimal results.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="accordion-item">
-                <button class="accordion-header">Do I need equipment for ab workouts?</button>
-                <div class="accordion-content">
-                    <p>No, bodyweight exercises can be very effective, but equipment like stability balls and resistance bands can help.</p>
+                <div class="accordion-item">
+                    <button class="accordion-header">Do I need equipment?</button>
+                    <div class="accordion-content">
+                        <p>No, bodyweight exercises work, but bands and balls help.</p>
+                    </div>
                 </div>
             </div>
         </section>        
     </main>
-    <footer>
-    </footer>
 </body>
 </html>
-
