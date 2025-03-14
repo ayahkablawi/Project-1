@@ -1,143 +1,154 @@
+/* General styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: light grey;
+    font-family: Arial, sans-serif; /* sans-serif changes the font if its unavailable*/
+    margin: 0; /*removes default margins from the body that browsers usually add*/
+    padding: 0;/* this removes the default padding*/
+    background-color: lightgray;
 }
-/*sets the font for the whole page, removes margins and padding, and sets background color*/
 
 header {
     background: #333;
-    color: white;
-    padding: 1px;
-    text-align: center;
+    color: white; /*makes the text white*/
+    padding: 10px; /* adds spacing to make it look bigger*/
+    text-align: center; 
 }
+
+/* Navigation */
 nav ul {
-    display: flex; /* centers navigation items*/
-    justify-content: center;
-    list-style: none; /* Removes the bullets*/
+    display: flex; /* puts navigation items in a row*/
+    justify-content: center; /* centers navigation horizontally*/
+    list-style: none; /* gets rid of bullet points*/
     background: #444;
-    padding: 0;
+    padding: 0; /* no padding around list*/
 }
+
 nav ul li {
-    margin: 0 15px;
+    margin: 0 15px; /* adds the spacing between all the navigations*/
 }
+
 nav ul li a {
-    color: white;
+    color: white; /* makes the nav links white*/
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 10px 15px; /* adds space around them so its easier to click*/
     display: inline-block;
 }
 
-/* Dropdown container */
+/* Dropdown */
 nav ul li.dropdown {
     position: relative;
 }
 
-
 nav ul li .dropdown-content {
-    display: none; /* hides drop down until you hover on it*/
+    display: none; 
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #444;
+    background: #444;
     min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /*adds a shadow effect*/
+    z-index: 1;/* makes the dropdown above everything*/
 }
 
-/* Shows the dropdown when hovering */
 nav ul li:hover .dropdown-content {
-    display: block; 
+    display: block; /* only shows drop down when you hover over it*/
 }
 
+/* Main content */
 main {
     padding: 20px;
     text-align: center;
 }
+
 section {
     background: white;
     padding: 20px;
     margin: 10px auto;
     width: 80%;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    border-radius: 10px; /* makes the corners round*/
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* adds shadow around the sections*/
 }
+
+/* Footer */
 footer {
     text-align: center;
-    padding: 1rem;
+    padding: 1rem; /* adds spacing in the footer*/
     background: #333;
     color: white;
-    position: absolute;
-    width: 100%;
+    position: absolute; /*puts the footer at the bottom of the page*/
+    width: 100%; /*makes footer cover the full width*/
     bottom: 0;
 }
 
+/* Modal */
 .modal {
-    display: none; /*should be hiding modal*/
-    position: fixed;
-    z-index: 1000;
+    display: none; /*keeps it hidden until you press on it*/
+    position: fixed; /*will stay in place even when you scroll*/
+    z-index: 1000; /*makes sure modal is ontop of evrething else*/
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* gives an overlay look*/
+    height: 100%; /* covers the whole screen*/
+    background: rgba(0, 0, 0, 0.5);
     justify-content: center;
     align-items: center;
 }
+
 .modal-content {
     background: white;
     padding: 20px;
     border-radius: 10px;
-    width: 50%;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+    width: 50%; /*makes modal take up half the screen*/
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     text-align: center;
 }
+
 .close-btn {
     position: absolute;
     right: 20px;
     top: 10px;
     font-size: 24px;
-    cursor: pointer;
+    cursor: pointer; /* chnaged the cursor to a hand whem i hovered over the button*/
 }
 
+/* Tooltip */
 .tooltip {
     position: relative;
-    cursor: pointer;
+    cursor: pointer; /* goes back to pointer when i hovered away*/
 }
 
 .tooltip::after {
     content: attr(data-tooltip);
     position: absolute;
-    bottom: 125%; /* Adjust position above the element */
+    bottom: 125%;
     left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.75);
+    transform: translateX(-50%); /*prefectly centers tooltip*/
+    background: rgba(0, 0, 0, 0.75);
     color: white;
     padding: 5px 8px;
     border-radius: 4px;
     font-size: 12px;
-    white-space: nowrap;
-    opacity: 0; /* makes it hidden*/
+    white-space: nowrap; /*keeps it all in one line*/
+    opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease; /* makes tool tip smoother*/
 }
 
 .tooltip:hover::after {
     opacity: 1;
-    visibility: visible; /* Appears when hovered*/
+    visibility: visible; /*only visible when you hover over*/
 }
 
+/* Accordion */
 .accordion-item {
-    border-bottom: 1px solid white;
-    margin-bottom: 10px;
+    border-bottom: 1px solid white; /* adds the white line under that divides and makes them look separate*/
+    margin-bottom: 10px;/* adds space between them*/
 }
 
 .accordion-header {
-    background-color: #444;
+    background: #444;
     color: white;
     padding: 10px;
-    width: 100%;
+    width: 100%;  /*whole section makes FAQ section expand when you click it*/
     text-align: left;
     border: none;
     cursor: pointer;
@@ -147,6 +158,11 @@ footer {
 .accordion-content {
     display: none;
     padding: 10px;
-    background-color: white;
-    border-left: 3px solid light grey;
+    background: white;
+    border-left: 3px solid lightgray;
+}
+
+/* Show accordion when active */
+.accordion-content.active {
+    display: block; /*active is used to show and hide the answers*/
 }
